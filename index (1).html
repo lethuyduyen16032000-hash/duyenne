@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Nền chuyển màu xanh dương nhạt sang hồng nhạt */
+            background: linear-gradient(135deg, #e3f2fd 0%, #fce4ec 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Tạo các họa tiết bánh sinh nhật bay lơ lửng */
+        .bg-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .icon {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.6;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .video-container {
+            position: relative;
+            z-index: 10;
+            width: 85%;
+            max-width: 900px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-icons">
+        <span class="icon" style="top: 10%; left: 10%;">🎂</span>
+        <span class="icon" style="top: 20%; right: 15%;">🍰</span>
+        <span class="icon" style="bottom: 15%; left: 20%;">🧁</span>
+        <span class="icon" style="bottom: 10%; right: 10%;">🎂</span>
+        <span class="icon" style="top: 50%; left: 5%;">🍰</span>
+        <span class="icon" style="top: 40%; right: 5%;">🧁</span>
+    </div>
+
+    <div class="video-container">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1oKWviEaYnXnW4uh7wZrU8CmR7hXHJLaN/preview" allow="autoplay"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
